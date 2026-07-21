@@ -1,0 +1,14 @@
+{
+  "license": {
+    "version": 5,
+    "uid": "2306145e-5104-47d6-aeb5-874ef474861b",
+    "type": "platinum",
+    "issue_date_in_millis": 1733529600000,
+    "expiry_date_in_millis": 1830268799000,
+    "max_nodes": 10,
+    "max_resource_units": null,
+    "issued_to": "China Ship Science Research Center",
+    "issuer": "Wuxi OneTech Technology Co.,Ltd.",
+    "start_date_in_millis": 1733529600000
+  }
+}
