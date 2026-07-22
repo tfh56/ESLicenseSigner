@@ -102,5 +102,4 @@ chmod +x *.sh
 ## License
 Copyright (c) [2019] [Pengcheng Libortory @Wuxi Onetech Co.,Ltd.]
 [ESLicenseSigner] is licensed under the Mulan PSL v1.
-You can use this software according to the terms and conditions of the Mulan
-PSL v1.
+You can use this software according to the terms and conditions of the MulanPSL v1.
