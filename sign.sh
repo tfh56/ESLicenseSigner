@@ -16,7 +16,7 @@ if [ -z "$ES_MODULES" ]; then
 fi
 
 #echo "Compiling ESLicenseSigner.java..."
-javac -cp ".:${ES_MODULES}" ESLicenseSigner.java
+${ES_HOME}/jdk/bin/javac -cp ".:${ES_MODULES}" ESLicenseSigner.java
 
 echo "Signing license.json..."
 ${ES_HOME}/jdk/bin/java -cp ".:${ES_MODULES}" ESLicenseSigner license.json private.key signed-license.txt
