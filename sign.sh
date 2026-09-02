@@ -1,8 +1,6 @@
 #!/bin/bash
 # Sign Elasticsearch license
 
-set -e
-
 cd "$(dirname "$0")"
 ES_HOME=${ES_HOME:-/usr/share/elasticsearch}
 

@@ -4,6 +4,10 @@ Simplified tool for generating and signing Elasticsearch licenses.
 
 ## Quick Start
 
+Prerequisite
+Elasticsearch is ready, with passord/token, and set ES_HOME to elasticsearch directory.
+export ES_HOME=/path/to/elasticsearch/home
+
 ### 1. Generate Keys
 ```bash
 ./gen-keys.sh
@@ -35,8 +39,9 @@ This compiles the Java signer and creates:
 ```
 Or manually,note ES password/token:
 ```bash
-curl -X PUT localhost:9200/_license \
+curl -X PUT -u user:password localhost:9200/_license \
   -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer token' \
   -d @signed-license.json
 ```
 
