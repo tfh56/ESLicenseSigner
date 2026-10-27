@@ -16,10 +16,10 @@ fi
 
 echo "Installing license to Elasticsearch (https://${ES_HOST}:${ES_PORT})..."
 
-$(curl -k -XPUT -u elastic:$ES_PASSWORD "https://${ES_HOST}:${ES_PORT}/_license" \
+[[ $(curl -ks -XPUT -u elastic:$ES_PASSWORD "https://${ES_HOST}:${ES_PORT}/_license" \
   -H 'Content-Type: application/json' \
   ${ES_TOKEN:+-H "Authorization: Bearer $ES_TOKEN"} \
-  -d @signed-license.json -w %http_code)!=200||return 1
+  -d "@signed-license.json" -o /dev/null -w "%{http_code}\n") -eq 200 ]]||exit 1
 
 echo ""
 echo "License installed successfully!"
